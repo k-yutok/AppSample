@@ -28,7 +28,7 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="O9F-WM-Xcm">
-                                        <rect key="frame" x="20" y="0.0" width="212" height="121"/>
+                                        <rect key="frame" x="20" y="0.0" width="277" height="41"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
                                         <state key="normal" title="Button"/>
                                         <buttonConfiguration key="configuration" style="gray" image="square.and.arrow.up.circle.fill" catalog="system" title="GoSegue" titleAlignment="center">
@@ -39,6 +39,15 @@
                                             <action selector="goSecondView:" destination="BYZ-38-t0r" eventType="touchUpInside" id="QGd-3L-kUu"/>
                                         </connections>
                                     </button>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="x1L-SP-qGX">
+                                        <rect key="frame" x="20" y="49" width="277" height="147"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="tinted" title="検索"/>
+                                        <connections>
+                                            <action selector="searchLive:" destination="BYZ-38-t0r" eventType="touchUpInside" id="EHs-Fr-xVH"/>
+                                        </connections>
+                                    </button>
                                 </subviews>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                             </view>
@@ -47,16 +56,60 @@
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
                     <connections>
+                        <outlet property="BtnSearch" destination="x1L-SP-qGX" id="21G-F2-9ot"/>
                         <outlet property="BtnSecondView" destination="O9F-WM-Xcm" id="T6v-J0-YZ0"/>
+                        <segue destination="1Ic-dk-CFv" kind="presentation" identifier="Second" modalPresentationStyle="fullScreen" id="RI2-X1-UNX"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="33" y="93"/>
+            <point key="canvasLocation" x="-43.92386530014641" y="98.4375"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="sHe-ZS-RLG">
+            <objects>
+                <viewController id="1Ic-dk-CFv" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="9JG-PK-qru">
+                        <rect key="frame" x="0.0" y="0.0" width="1366" height="1024"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="o92-2c-6o9">
+                                <rect key="frame" x="20" y="20" width="1326" height="984"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <subviews>
+                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" text="SecondView" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="y4P-Ph-pfJ">
+                                        <rect key="frame" x="8" y="23" width="1310" height="67"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                        <color key="textColor" systemColor="labelColor"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                    </textView>
+                                    <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Ue0-Hu-ejQ">
+                                        <rect key="frame" x="8" y="98" width="1310" height="859"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <viewLayoutGuide key="contentLayoutGuide" id="XNo-LR-oye"/>
+                                        <viewLayoutGuide key="frameLayoutGuide" id="lOL-zG-wHm"/>
+                                    </scrollView>
+                                </subviews>
+                                <color key="backgroundColor" white="0.90863306992718962" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </view>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="fnL-VD-iPc"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="11Z-QZ-XIY"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="tho-9X-14Q" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="671.59590043923856" y="98.4375"/>
         </scene>
     </scenes>
     <resources>
         <image name="square.and.arrow.up.circle.fill" catalog="system" width="128" height="121"/>
+        <systemColor name="labelColor">
+            <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>

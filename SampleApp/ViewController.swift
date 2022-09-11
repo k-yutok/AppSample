@@ -9,21 +9,28 @@ import UIKit
 
 class ViewController: UIViewController {
 
+    @IBOutlet weak var BtnSearch: UIButton!
     @IBOutlet weak var BtnSecondView: UIButton!
     let vc = SecondViewController()
-    let Viewstoryboard = UIStoryboard(name: "SecondView", bundle: nil)
    
     override func viewDidLoad() {
         super.viewDidLoad()
-        
         vc.modalPresentationStyle = .fullScreen
+        
+    }
+    
+    func madeImage(){
+        
+    }
+    @IBAction func goSecondView(_ sender: Any) {
+        self.performSegue(withIdentifier: "Second", sender: nil)
+     
     }
     
     
-    @IBAction func goSecondView(_ sender: Any) {
-//        self.performSegue(withIdentifier: "SecondView", sender: nil)
-        //self.present(vc,animated: true,completion: nil)
-        let nextVC = Viewstoryboard.instantiateViewControllerWithIdentifier("STORYBOARD_ID_OF_VC_CLASS") as! UIViewController.navigationController!.pushViewController(vc, animated: true)
+    @IBAction func searchLive(_ sender: Any) {
+        var dateLive = ""
+        
     }
     
 
