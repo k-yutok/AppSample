@@ -28,7 +28,7 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="O9F-WM-Xcm">
-                                        <rect key="frame" x="20" y="0.0" width="212" height="121"/>
+                                        <rect key="frame" x="20" y="0.0" width="277" height="41"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
                                         <state key="normal" title="Button"/>
                                         <buttonConfiguration key="configuration" style="gray" image="square.and.arrow.up.circle.fill" catalog="system" title="GoSegue" titleAlignment="center">
@@ -39,6 +39,15 @@
                                             <action selector="goSecondView:" destination="BYZ-38-t0r" eventType="touchUpInside" id="QGd-3L-kUu"/>
                                         </connections>
                                     </button>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="x1L-SP-qGX">
+                                        <rect key="frame" x="20" y="49" width="277" height="147"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="tinted" title="検索"/>
+                                        <connections>
+                                            <action selector="searchLive:" destination="BYZ-38-t0r" eventType="touchUpInside" id="EHs-Fr-xVH"/>
+                                        </connections>
+                                    </button>
                                 </subviews>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                             </view>
@@ -47,13 +56,14 @@
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
                     <connections>
+                        <outlet property="BtnSearch" destination="x1L-SP-qGX" id="21G-F2-9ot"/>
                         <outlet property="BtnSecondView" destination="O9F-WM-Xcm" id="T6v-J0-YZ0"/>
                         <segue destination="1Ic-dk-CFv" kind="presentation" identifier="Second" modalPresentationStyle="fullScreen" id="RI2-X1-UNX"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-552" y="67"/>
+            <point key="canvasLocation" x="-43.92386530014641" y="98.4375"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="sHe-ZS-RLG">
