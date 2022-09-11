@@ -48,15 +48,52 @@
                     </view>
                     <connections>
                         <outlet property="BtnSecondView" destination="O9F-WM-Xcm" id="T6v-J0-YZ0"/>
+                        <segue destination="1Ic-dk-CFv" kind="presentation" identifier="Second" modalPresentationStyle="fullScreen" id="RI2-X1-UNX"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="33" y="93"/>
+            <point key="canvasLocation" x="-552" y="67"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="sHe-ZS-RLG">
+            <objects>
+                <viewController id="1Ic-dk-CFv" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="9JG-PK-qru">
+                        <rect key="frame" x="0.0" y="0.0" width="1366" height="1024"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="o92-2c-6o9">
+                                <rect key="frame" x="97" y="67" width="970" height="916"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <subviews>
+                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" text="SecondView" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="y4P-Ph-pfJ">
+                                        <rect key="frame" x="95" y="79" width="745" height="420"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                        <color key="textColor" systemColor="labelColor"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                    </textView>
+                                </subviews>
+                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </view>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="fnL-VD-iPc"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="11Z-QZ-XIY"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="tho-9X-14Q" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="671.59590043923856" y="98.4375"/>
         </scene>
     </scenes>
     <resources>
         <image name="square.and.arrow.up.circle.fill" catalog="system" width="128" height="121"/>
+        <systemColor name="labelColor">
+            <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
